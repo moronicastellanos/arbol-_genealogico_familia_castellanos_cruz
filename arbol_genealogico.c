@@ -1,52 +1,77 @@
 #include<stdio.h>
 #include<conio.h>
-
-void menu();
+void arbol();
 int main(){
-	
-menu();	
 
 
+	arbol();
 	
-getch();
-return 0;
+	
+	return 0;
+	getch();
 }
-void menu(){
-	
-	int opc;
-	do{
-		printf("\n1.-Mi generacion");
-		printf("\n2.-Padres");
-		printf("\n3.-Abuelos"); 
-		printf("\n4.-Bisabuelos");
-		printf("\nSelecciona una opcion: ");
-		scanf("%d",&opc);
-		
-		
-		switch(opc){
-			case 1: printf("\n1.-Mi generacion");
-			        printf("\n yo      hermano");
-			        printf("\n carlos  jesus");
-			        printf("\n\n");
-		
-			break;
-			case 2:printf("\n2.-Padres");
-			       printf("\n padre    madre");
-			       printf("\n juan     Avi");
-				  printf("\n\n");		
-			break;
-			case 3:printf("\n3.-Abuelos"); 
-			       printf("\n abuelo paterno | abuela paterna | abuelo materno  | abuela materno");
-			       printf("\n Salomon          gloria           noe               noemi");
-			       printf("\n\n");
-	
-			break;
-			case 4:	printf("\n4.-Bisabuelos");
-			break;
-		}
-		
-		
-		
-	}while(opc=!5);
-		
+
+void arbol(){
+	int i;
+	char a[3][50] = {
+	                 "      yo               hermano",
+				  "carlos moroni      jesus abraham",   
+				  "castellanos cruz  castellanos cruz" };
+	 char b[3][50] = {
+	                 "     padre               madre",
+				  "  juan carlos           avi cruz ",
+				  "castellanos garcia     guitierrez"};
+	char c[3][50] = {
+	                 "abuelo paterno      abuela paterna",
+				  "Pedro salomon         gloria",
+				  "castellanos           garcia"};
+     char d[3][50] = {
+	                 "abuelo materno      abuela materna",
+				  " noe cruz               noemi ",
+				  "  ruperto            guitierrez"};
+	char a1[2][70] = {
+	                 "padre del abuelo paterno   madre del abuelo paterno",
+				  "david castellanos              alicia "};
+	char b1[2][70] = {
+	                 "padre de la abuela paterna   madre de la abuela paterna",
+				  "ernesto                         gregoria "};
+	char c1[2][70] = {
+	                 "padre del abuelo materno   madre del abuelo materno",
+				  "jose                            lorenza "};
+	char d1[2][70] = {
+	                 "padre de la abuela materna  madre de la abuela materna",
+				  "nombre1                          nombre2 "};
+	for(i=0;i<3;i++){
+		printf("%s\n",a+i,a+i);
+	}
+	printf("\n\n");
+		for(i=0;i<3;i++){
+		printf("%s\n",b+i,b+i);
+	}
+	printf("\n\n");
+		for(i=0;i<2;i++){
+		printf("%s\n",c+i,c+i);
+	}
+	printf("\n\n");
+		for(i=0;i<3;i++){
+		printf("%s\n",d+i,d+i);
+	}
+	printf("\n\n");
+		for(i=0;i<2;i++){
+		printf("%s\n",a1+i,a1+i);
+	}
+		printf("\n\n");
+		for(i=0;i<2;i++){
+		printf("%s\n",b1+i,b1+i);
+	}
+	printf("\n\n");
+		for(i=0;i<2;i++){
+		printf("%s\n",c1+i,c1+i);
+	}
+	printf("\n\n");
+		for(i=0;i<2;i++){
+		printf("%s\n",d1+i,d1+i);
+	}
+
+
 }
